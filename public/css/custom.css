@@ -1,0 +1,172 @@
+/* CSS Document */
+*{ padding:0;margin:0;font-family:Arial, Helvetica, sans-serif;}
+html,body{margin:0 auto;width:1180px;height:100%;}
+.container{
+	display:block;
+	width:inherit;
+	height:inherit;
+}
+#header{
+	width: inherit;
+  	height: 60px;
+  	margin-bottom: 20px;
+  	border-bottom:1px #535353 solid;
+}
+#header > span{position:absolute;right:0;display:inline-block;margin-right:0.3em; height:16px; padding-top:.3em; color:#ddd;text-shadow:#FFF}
+#header > span nav ul{list-style:none;}
+#header > span nav ul li{display:inline;margin-left:.5px;}
+#header > span nav ul li a{display:inline-block;text-decoration:none;color:#535353;}
+#header > span nav ul li a:hover{ text-decoration:underline}
+header{display:inline-block;color:#CCC;padding:0 1em;}
+.home{
+	content:url(/mvc/public/images/Home.png);
+	width:24px;
+	height:20px;
+	background-position:bottom;	
+}
+.login{
+	content:url(/mvc/public/images/locked.png);
+	width:24px;
+	height:20px;
+	background-position:bottom;	
+}
+.logout{
+	content:url(/mvc/public/images/unlocked.png);
+	width:24px;
+	height:20px;
+	background-position:bottom;	
+}
+.logo{
+	padding:0.6em 0.2em;
+	width:20px;
+	height:18px;
+	display:inline-block;	
+	content:url(/mvc/public/images/dinqit_logo_blue.png) ;
+	
+}
+.diensten{
+	display:inline-block;
+	content:url(/mvc/public/images/Gears.png);
+	width:20px;
+	height:18px;
+	background-position:center;
+}
+.info{
+	display:inline-block;
+	content:url(/mvc/public/images/info.png);
+	width:20px;
+	height:18px;
+	background-position:center;
+}
+.app_name{
+	padding:0.6em 0.4em;
+	width:24px;
+	height:18px;
+	display:inline-block;
+	content:url(/mvc/public/images/App_name_dark.png) ;
+	box-shadow:inset 3 rgba(255,255,255,0.8) ;
+	
+}
+div.main{
+	width:70%;
+	padding:2em;
+	display:inline-block;
+	color:#505050;
+}
+div.main >h3{color:#535353;background:#FFF;} 
+.main table{width:inherit;}
+div.sidebar_left{
+	display:block;
+	float:left;
+	width:18%;
+	/*border-right:#999 1px solid;*/
+	height:inherit;
+	padding:1em;
+	background:#FFF;/*url(/mvc/public/images/side_bg_flip.png)*/
+	color:#CCC;
+	margin-top:1em;
+}
+legend h3{color:#535353;background:#FFF}
+.sidebar_left section{
+	display:block;
+	/*padding:1em;*/
+	background-color:#FFF;
+	border-radius:10px;
+	color:#505050;
+	border:rgba(0,0,0,0.15) 1px solid;
+	margin-top:1em;
+}
+.sidebar_left section p{padding: 1em;}
+
+div.sidebar_left section  h1,h2,h3,h4{
+	margin:0 0 1em 0;
+	padding:.3em 1em .3em 1em;
+	background:url(/mvc/public/images/grass_red.jpg);
+	color:#FFF;
+	border-radius:10px 10px 0 0;
+}
+div.sidebar_left section ul{list-style:none; margin:0 0 0 0;padding: 0 1em 1em  1em;}
+div.sidebar_left section ul li{ display:block; /*margin:0 1em 1.3em 1em;*/ border-bottom:1px rgba(0,0,0,0.17) dotted;	}
+div.sidebar_left section ul li a{display:block; text-decoration:none; color:#535353;padding:1em .2em .3em .2em;}
+div.sidebar_left section ul li a:hover{border-bottom:3px rgba(217,0,0,0.6) solid;}
+ul.login_form{
+	display:block;
+	box-shadow: 2px 3px #CCCCCC;
+	border-radius:6px;
+	border: 1px solid rgba(0,0,0,0.2);
+	width:500px;
+	height:auto;
+	padding:2em;
+	margin:1em 0;
+}
+ul.login_form li{display:block;margin: .35em 0}
+ul.login_form li label{display:inline-block;width:140px;}
+ul.login_form li input[type='text']{display:inline-block;height:40px;}
+ul.login_form li input[type='submit']{display:block;width:120px;height:30px;}
+
+p.message{
+	display:block;
+	background-color:#DDD;
+	height:40px;
+	line-height:40px;
+	padding:0 1em;
+	margin:1em 0;
+	position:static;
+	width:100%;
+	border-radius:5px;
+}
+footer{
+	display:block;
+	position:fixed;
+	bottom:0;
+	/*text-align:center;*/
+	width: 85.2%;
+	/*padding:0 1em;*/
+	border-top: 1px solid rgba(0,0,0,0.2);
+	/*background-image: url(/mvc/public/images/grass_red.jpg);
+	font-weight:600;*/
+	font-size:13px;
+	height:40px;
+	line-height:20px;
+}
+footer p{
+		
+}
+footer span.c{
+	width:inherit;
+	text-align:center;
+	text-shadow:1px 1px rgba(53,53,53,0.2);
+	display:inline-block;
+}
+footer span.c .red{color:#D90000;}
+footer span.r{position:absolute;right:0;margin-right:1em;}
+footer span.r a{text-decoration:none;color:#535353;}
+footer span.r a:hover{
+	text-decoration:none;
+	color:rgba(217,0,0,1.0);
+	text-decoration:underline;	
+}
+div.main p.name{
+	/*margin:1em;*/
+	color:red;
+}
