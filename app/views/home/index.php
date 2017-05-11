@@ -2,6 +2,7 @@
 require_once(MODELS."template.php");
 $title='MCV:Home';
 
+
 $message = "Dit is een test";
 //calling the template 
 $template = new Template;
@@ -24,11 +25,21 @@ array("src"=>$image_2,"alt"=>'SpeedWay to follow'),
 array("src"=>$image_3,"alt"=>'Wooble with Grooble'),
 array("src"=>$image_4,"alt"=>'Nice Forest Power')
 ));
+
 //$_SESSION['msg']="Dit is een sessie bericht";
 $template->assign('title',$title);
 $template->assign('css','/mvc/public/css/style.css');
 $template->assign('header',"DinQIT");
 $template->assign('message',$message);
+function do_truncate($params, $content,$marty,$extend="....more"){
+	$cutString = substr($content,0,230);
+	$fragment = substr($cutString,0,strrpos($cutString,' '));
+	//$fragment = preg_replace('/\s+(\S+)?$/','', $fragment);
+	return $fragment;
+}
+//Hier registreren we de plugin
+$template->registerPlugin('block','truncate','do_truncate');
+//bergen met assignments;
 $template->registerPlugin('function','set_message','show_session_message');
 $template->registerPlugin('function','unset_message','unset_message');
 $template->assign('fnav',array(
@@ -38,6 +49,8 @@ $template->assign('fnav',array(
 	array("num"=>"4","title"=>"Voorwaarden",'href'=>WWW_URI.'voorwaarden'),
 	array("num"=>"5","title"=>"Vrijwaring",'href'=>WWW_URI.'vrijwaring')
 ));
+
+
 $template->display('home/index.xhtml');
 
 //displaying the session message
@@ -52,6 +65,8 @@ function show_session_message(){
 function unset_message(){
 	unset($_SESSION['msg']);	
 }
+
+
 ?>
 <script type="text/javascript" src="/mvc/public/js/image_slide.js"></script>
 <script type="text/javascript">
